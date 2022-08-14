@@ -5,7 +5,7 @@
 		<!-- Basic -->
 		<meta charset="UTF-8">
 
-		<title>About</title>
+		<title>Nestable | Okler Themes | Porto-Admin</title>
 		<meta name="keywords" content="HTML5 Admin Template" />
 		<meta name="description" content="Porto Admin - Responsive HTML5 Template">
 		<meta name="author" content="okler.net">
@@ -45,13 +45,13 @@
 
 			<div class="inner-wrapper">
 				<!-- start: sidebar -->
-				<aside id="sidebar-left" class="sidebar-left" w3-include-html="./sidebar.html">				
+				<aside id="sidebar-left" class="sidebar-left" w3-include-html="./sidebar.html">
 				</aside>
 				<!-- end: sidebar -->
 
 				<section role="main" class="content-body">
 					<header class="page-header">
-						<h2>Session Timeout</h2>
+						<h2>Nestable</h2>
 					
 						<div class="right-wrapper pull-right">
 							<ol class="breadcrumbs">
@@ -60,8 +60,8 @@
 										<i class="fa fa-home"></i>
 									</a>
 								</li>
-								<!-- <li><span>Pages</span></li> -->
-								<li><span>About</span></li>
+								<li><span>UI Elements</span></li>
+								<li><span>Nestable</span></li>
 							</ol>
 					
 							<a class="sidebar-right-toggle">
@@ -70,45 +70,59 @@
 					</header>
 
 					<!-- start: page -->
-					Experiment control software &nbsp;&nbsp;&nbsp;  ver. 1
+					<div class="row">
+						<div class="col-md-12">
+							<section class="panel">
+								<header class="panel-heading">
+									<div class="panel-actions">
+										<a href="#" class="fa fa-caret-down"></a>
+										<a href="#" class="fa fa-times"></a>
+									</div>
 
-					<br />
-					<br />
-					<a href="https://github.com/VolodymyrSvintozelskyi/sw_experiment_control" target="_blank" rel="noopener noreferrer">
-						<i class="fa fa-github" aria-hidden="true"></i>
-						Source code
-					</a>
-					<br />
-
-					
-					<br />
-					Developed by: 
-					<br />
-					Volodymyr Svintozelskyi 
-					<br>
-					
-					<a href="mailto:volodymyrsvintozelskyi@gmail.com">
-						<i class="fa fa-envelope" aria-hidden="true"></i>
-						Email
-					</a>
-					&nbsp;&nbsp;&nbsp;
-					<a href="https://t.me/vsvintozelskyi" target="_blank" rel="noopener noreferrer">
-						<i class="fa fa-paper-plane" aria-hidden="true"></i>
-						Telegram
-					</a>
-
-					<br />
-					<br />
-
-					Design by:
-					<br />
-					<a href="https://github.com/icdcom/octopus" target="_blank" rel="noopener noreferrer">
-						<i class="fa fa-github" aria-hidden="true"></i>
-						Colorlib
-					</a>
-					
-					
-
+									<h2 class="panel-title">Nestable List</h2>
+									<p class="panel-subtitle">Drag & drop hierarchical list with mouse and touch compatibility.</p>
+								</header>
+								<div class="panel-body">
+									<div class="col-md-6">
+										<div class="dd" id="nestable">
+											<ol class="dd-list">
+												<li class="dd-item dd-nochildren" data-id="1">
+													<div class="dd-handle">Item 1</div>
+												</li>
+												<li class="dd-item" data-id="2">
+													<div class="dd-handle">Item 2</div>
+													Non dd handle div
+													<ol class="dd-list">
+														<li class="dd-item" data-id="3"><div class="dd-handle">Item 3</div></li>
+														<li class="dd-item" data-id="4"><div class="dd-handle">Item 4</div></li>
+														<li class="dd-item" data-id="5">
+															<div class="dd-handle">Item 5</div>
+															<ol class="dd-list">
+																<li class="dd-item" data-id="6"><div class="dd-handle">Item 6</div></li>
+																<li class="dd-item" data-id="7"><div class="dd-handle">Item 7</div></li>
+																<li class="dd-item" data-id="8"><div class="dd-handle">Item 8</div></li>
+															</ol>
+														</li>
+														<li class="dd-item" data-id="9"><div class="dd-handle">Item 9</div></li>
+														<li class="dd-item" data-id="10"><div class="dd-handle">Item 10</div></li>
+													</ol>
+												</li>
+												<li class="dd-item" data-id="11">
+													<div class="dd-handle">Item 11</div>
+												</li>
+												<li class="dd-item .dd-nochildren" data-id="12">
+													<div class="dd-handle">Item 12</div>
+												</li>
+											</ol>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<textarea id="nestable-output" rows="3" class="form-control"></textarea>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
 					<!-- end: page -->
 				</section>
 			</div>
@@ -128,7 +142,7 @@
 		<script src="assets/vendor/jquery-placeholder/jquery.placeholder.js"></script>
 		
 		<!-- Specific Page Vendor -->
-		<script src="assets/vendor/jquery-idletimer/dist/idle-timer.js"></script>
+		<script src="assets/vendor/jquery-nestable/jquery.nestable.js"></script>
 		
 		<!-- Theme Base, Components and Settings -->
 		<script src="assets/javascripts/theme.js"></script>
@@ -140,6 +154,7 @@
 		<script src="assets/javascripts/theme.init.js"></script>
 
 
-		<script type="text/javascript" src="/eel.js"></script>
+		<!-- Examples -->
+		<script src="assets/javascripts/ui-elements/examples.nestable.js"></script>
 	</body>
 </html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<range>
+    <div class="form-group col-md-12">
+        <div class="col-md-5">
+            <div class="row">
+                <label class="control-label">{name}:</label>
+            </div>
+            <div class="row">
+                <p class="output"><code>min</code>: <b class="min">{value_0}</b> and <code>max</code>: <b class="max">{value_1}</b></p>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="m-md slider-primary" data-plugin-slider data-plugin-options='{ "values": [ {value_0}, {value_1} ], "range": true, "max": {max}, "min": {min}, "step": {step} }' data-plugin-slider-output="#{driver_id}_{id}_slider">
+                <input id="{driver_id}_{id}_slider" type="hidden" value="{value}" onchange="onchange_range_slider($(this), '{id}', '{driver_id}');"/>
+            </div>
+        </div>
+    </div>
+</range>
+<dropdown>
+    <div class="form-group col-md-12">
+        <div class="col-md-5">
+            <div class="row">
+                <label class="control-label">{name}:</label>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <select class="form-control input-sm mb-md" onchange="onchange_input($(this), '{id}', '{driver_id}')">
+                {OPTION_LIST}
+            </select>
+        </div>
+    </div>
+</dropdown>
+<text>
+    <div class="form-group col-md-12">
+        <div class="col-md-5">
+            <div class="row">
+                <label class="control-label">{name}:</label>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <input type="text" class="form-control" value="{value}" onchange="onchange_input($(this), '{id}', '{driver_id}')">
+        </div>
+    </div>
+</text>
+<number>
+    <div class="form-group col-md-12">
+        <div class="col-md-5">
+            <div class="row">
+                <label class="control-label">{name}:</label>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <input type="number" class="form-control" value="{value}" min="{min}" max="{max}" step="{step}" onchange="onchange_input($(this), '{id}', '{driver_id}')">
+        </div>
+    </div>
+</number>

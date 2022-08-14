@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<div data-sortable-id="{driver_id}" class="list-group-item" style="background: none; padding-right: 5px;">
+    <section class=" dd-handle panel {DATA_ADDITIONAL_PANEL_CLASSES}" style="cursor: grab ">
+        <header class="panel-heading">
+            <div class="panel-actions">
+                <a href="#driver_modalSettings_{driver_id}" class="fa fa-gear modal-with-form" onclick="return false;"></a>
+                <a href="#" class="fa fa-caret-down" onclick="return false;"></a>
+                <a href="#" class="fa fa-times" onclick="return false;"></a>
+            </div>
+
+            <!-- <a class="modal-with-form btn btn-default" href="#modalForm">Open Form</a> -->
+             <!-- modal-block modal-block-primary mfp-hide -->
+            <!-- Modal Form -->
+            <div id="driver_modalSettings_{driver_id}" class="zoom-anim-dialog modal-block modal-block-primary mfp-hide">
+                <section class="panel">
+                    <header class="panel-heading">
+                        <h2 class="panel-title">{driver_title} settings</h2>
+                    </header>
+                    <div class="panel-body">
+                        <form id="demo-form" class="form-horizontal mb-lg" novalidate="novalidate">
+                            {DATA_NOPREVIEW_PARS_CONTENT}
+                        </form>
+                    </div>
+                    <footer class="panel-footer">
+                        <div class="row">
+                            <div class="col-md-12 text-right">
+                                <button class="btn btn-primary modal-confirm">Ok</button>
+                            </div>
+                        </div>
+                    </footer>
+                </section>
+            </div>
+
+            <h2 class="panel-title">{driver_title}</h2>
+            <p class="panel-subtitle">{driver_selected_action}</p>
+        </header>
+        <div class="panel-body " style="display:flex; flex-wrap: wrap;">
+            {DATA_PREVIEW_PARS_CONTENT}
+        </div>
+    </section>
+    <div class="dd-children ml-lg list-group nested-sortable">
+
+    </div>
+</div>
+
+<!-- <script type="text/javascript"></script> -->

@@ -746,10 +746,8 @@ window.theme = {};
 }).apply(this, [ jQuery ]);
 
 // Panels
-(function( $ ) {
-
-	$(function() {
-		$('.panel')
+function update_panel_action_buttons( $ , panel ) {
+		panel
 			.on( 'click', '.panel-actions a.fa-caret-up', function( e ) {
 				e.preventDefault();
 
@@ -782,7 +780,6 @@ window.theme = {};
 			})
 			.on( 'click', '.panel-actions a.fa-times', function( e ) {
 				e.preventDefault();
-
 				var $panel,
 					$row;
 
@@ -798,9 +795,10 @@ window.theme = {};
 					$panel.remove();
 				}
 			});
-	});
 
-})( jQuery );
+}
+
+update_panel_action_buttons( jQuery , $('.panel'));
 
 // Bootstrap Toggle
 (function( $ ) {
