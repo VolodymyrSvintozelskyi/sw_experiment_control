@@ -109,3 +109,12 @@ async function read_from_file(){
         return undefined;
     }
 }
+
+async function start_run(conf){
+    if (typeof eel !== 'undefined'){
+        return await eel.start_exp(conf)();
+    }else{
+        make_notification("Critical error", "No EEL instance found!", "error", 10000);
+        return undefined;
+    }
+}

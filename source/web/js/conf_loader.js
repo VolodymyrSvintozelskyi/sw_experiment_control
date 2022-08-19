@@ -69,4 +69,10 @@ $(window).unload(function(){
     });
   })();
 
+(function() {
+    $("#start_run").on("click", async function(){
+        let conf = generate_conf();
+        start_run(conf);
+    })
+})();
 

@@ -31,6 +31,7 @@ export function nestable_serialize(sortable) {
             id: children[i].dataset[identifier],
             pars: $(children[i]).data("pars"),
             title: $(children[i]).data("title"),
+            device: $(children[i]).data("device"),
             selected_action: $(children[i]).data("selected_action"),
             allow_nestable: $(children[i]).data("allow_nestable"),
             children: nested ? nestable_serialize(nested) : []
@@ -111,7 +112,7 @@ function add_el(root_el, list){
         root_el.children().last().find("a.fa-times").click(function(){
             $(this).parents('.list-group-item').eq(0).remove();
         });
-        $.each(["title","id", "pars", "selected_action", "allow_nestable"], function(i,parname){
+        $.each(["title","id", "pars", "selected_action", "allow_nestable", "device"], function(i,parname){
             root_el.children().last().data(parname, el[parname]);    
         });
 
@@ -147,6 +148,7 @@ export function add_device_to_nestable(device, pars){
     add_el($root,[{
         "id":new_device_id,
         "title": device.driver_name,
+        "device": device,
         "pars": pars,
         "selected_action": device.driver_selected_action,
         "allow_nestable": device.driver_allow_nestable
